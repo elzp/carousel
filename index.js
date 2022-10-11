@@ -25,7 +25,7 @@ left.addEventListener('click', () => {
   } else {
     logos[idOfVisible - 1].classList.remove('hidden');
     logos[idOfVisible - 1].classList.add('md:flex');
-    status[logos.length - 1] = true;
+    status[idOfVisible - 1] = true;
   }
 });
 
