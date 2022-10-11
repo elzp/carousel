@@ -1,3 +1,63 @@
-h1, h2 {
+h1,
+h2 {
   font-family: Lato;
+}
+.disappear-to-left {
+  animation: carousel1 3s linear forwards;
+  position: absolute;
+}
+
+@keyframes carousel1 {
+  0% {
+    transform: translateX(0%);
+
+    /* left: 0;
+    right: 0%; */
+  }
+
+  100% {
+    transform: translateX(-100%);
+    /* left: 0;
+    right: 100%; */
+  }
+}
+.appear-to-left {
+  animation: carousel2 3s linear forwards;
+}
+
+@keyframes carousel2 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.disappear-to-right {
+  animation: carousel3 3s forwards;
+}
+
+@keyframes carousel3 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+.appear-to-right {
+  animation: carousel4 3s forwards;
+}
+
+@keyframes carousel4 {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
 }
