@@ -16,12 +16,12 @@ left.addEventListener('click', () => {
   console.log(idOfVisible);
   logos[idOfVisible].classList.remove('appear-to-left');
   logos[idOfVisible].classList.add('disappear-to-left');
-  setTimeout(() => {
-    logos[idOfVisible].classList.add('hidden');
-    logos[idOfVisible].classList.remove('disappear-to-left');
-  }, 3000);
-  // ;
   logos[idOfVisible].classList.remove('md:flex');
+  // setTimeout(() => {
+  logos[idOfVisible].classList.add('hidden');
+  logos[idOfVisible].classList.remove('disappear-to-left');
+  // }, 1000);
+  // ;
   status[idOfVisible] = false;
 
   if (idOfVisible === 0) {
@@ -32,7 +32,9 @@ left.addEventListener('click', () => {
 
     setTimeout(() => {
       logos[logos.length - 1].classList.remove('appear-to-left');
-    }, 3000);
+      logos[idOfVisible].classList.add('hidden');
+      logos[idOfVisible].classList.remove('disappear-to-left');
+    }, 1000);
     status[logos.length - 1] = true;
   } else {
     logos[idOfVisible - 1].classList.remove('hidden');
@@ -41,7 +43,9 @@ left.addEventListener('click', () => {
     logos[idOfVisible - 1].classList.add('md:flex');
     setTimeout(() => {
       logos[idOfVisible - 1].classList.remove('appear-to-left');
-    }, 3000);
+      logos[idOfVisible].classList.add('hidden');
+      logos[idOfVisible].classList.remove('disappear-to-left');
+    }, 1000);
 
     status[idOfVisible - 1] = true;
   }
@@ -51,10 +55,10 @@ right.addEventListener('click', () => {
   let idOfVisible = status.indexOf(true);
   console.log(idOfVisible);
   logos[idOfVisible].classList.add('disappear-to-right');
-  setTimeout(() => {
-    logos[idOfVisible].classList.add('hidden');
-    logos[idOfVisible].classList.remove('disappear-to-right');
-  }, 3000);
+  // setTimeout(() => {
+  logos[idOfVisible].classList.add('hidden');
+  logos[idOfVisible].classList.remove('disappear-to-right');
+  // }, 1000);
 
   logos[idOfVisible].classList.remove('md:flex');
   status[idOfVisible] = false;
@@ -66,7 +70,7 @@ right.addEventListener('click', () => {
 
     setTimeout(() => {
       logos[0].classList.remove('appear-to-right');
-    }, 3000);
+    }, 1000);
     status[0] = true;
   } else {
     logos[idOfVisible + 1].classList.remove('hidden');
@@ -74,7 +78,7 @@ right.addEventListener('click', () => {
     logos[idOfVisible + 1].classList.add('md:flex');
     setTimeout(() => {
       logos[idOfVisible + 1].classList.remove('appear-to-right');
-    }, 3000);
+    }, 1000);
 
     status[idOfVisible + 1] = true;
   }

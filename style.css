@@ -3,26 +3,22 @@ h2 {
   font-family: Lato;
 }
 .disappear-to-left {
-  animation: carousel1 3s linear forwards;
+  animation: carousel1 0.5s linear forwards;
   position: absolute;
+  display: block;
 }
 
 @keyframes carousel1 {
   0% {
-    transform: translateX(0%);
-
-    /* left: 0;
-    right: 0%; */
+    transform: translateX(1%);
   }
 
   100% {
     transform: translateX(-100%);
-    /* left: 0;
-    right: 100%; */
   }
 }
 .appear-to-left {
-  animation: carousel2 3s linear forwards;
+  animation: carousel2 0.5s linear forwards;
 }
 
 @keyframes carousel2 {
@@ -36,12 +32,14 @@ h2 {
 }
 
 .disappear-to-right {
-  animation: carousel3 3s forwards;
+  animation: carousel3 0.5s forwards;
+  position: absolute;
+  display: block;
 }
 
 @keyframes carousel3 {
   0% {
-    transform: translateX(0%);
+    transform: translateX(1%);
   }
 
   100% {
@@ -49,7 +47,7 @@ h2 {
   }
 }
 .appear-to-right {
-  animation: carousel4 3s forwards;
+  animation: carousel4 0.5s forwards;
 }
 
 @keyframes carousel4 {
