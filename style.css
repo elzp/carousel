@@ -1,3 +1,68 @@
-h1, h2 {
+h1,
+h2 {
   font-family: Lato;
+}
+.disappear-to-left {
+  animation: carousel1 0.5s linear forwards;
+  position: absolute;
+  /* display: block; */
+}
+
+@keyframes carousel1 {
+  0% {
+    transform: translateX(1%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.appear-to-left {
+  animation: carousel2 0.5s linear forwards;
+}
+
+@keyframes carousel2 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.disappear-to-right {
+  animation: carousel3 0.5s forwards;
+  position: absolute;
+  /* display: block; */
+}
+
+@keyframes carousel3 {
+  0% {
+    transform: translateX(1%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+.appear-to-right {
+  animation: carousel4 0.5s forwards;
+}
+
+@keyframes carousel4 {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.z-1 {
+  z-index: -1;
+}
+.z-0 {
+  z-index: 0;
 }
