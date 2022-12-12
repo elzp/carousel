@@ -9,9 +9,9 @@ const status = Array.from(Array(logos.length)).map((it, index) => {
   return index === 0;
 });
 
-right.addEventListener('click', () => {
+right.addEventListener('click', function () {
   let idOfVisible = status.indexOf(true);
-
+  this.setAttribute('disabled', true);
   logos[idOfVisible].classList.remove('appear-to-right');
   logos[idOfVisible].classList.add('disappear-to-right');
   setTimeout(() => {
@@ -33,6 +33,7 @@ right.addEventListener('click', () => {
 
       logos[idOfVisible].classList.add('hidden');
       logos[idOfVisible].classList.remove('disappear-to-right');
+      this.removeAttribute('disabled');
     }, 1000);
     status[logos.length - 1] = true;
   } else {
@@ -44,6 +45,7 @@ right.addEventListener('click', () => {
       logos[idOfVisible - 1].classList.remove('appear-to-right');
       logos[idOfVisible].classList.add('hidden');
       logos[idOfVisible].classList.remove('disappear-to-right');
+      this.removeAttribute('disabled');
     }, 1000);
 
     status[idOfVisible - 1] = true;
@@ -52,6 +54,7 @@ right.addEventListener('click', () => {
 
 left.addEventListener('click', () => {
   let idOfVisible = status.indexOf(true);
+  this.setAttribute('disabled', true);
 
   logos[idOfVisible].classList.remove('appear-to-left');
   logos[idOfVisible].classList.add('disappear-to-left');
@@ -74,6 +77,7 @@ left.addEventListener('click', () => {
 
       logos[idOfVisible].classList.add('hidden');
       logos[idOfVisible].classList.remove('disappear-to-left');
+      this.removeAttribute('disabled');
     }, 1000);
     status[0] = true;
   } else {
@@ -85,6 +89,7 @@ left.addEventListener('click', () => {
       logos[idOfVisible + 1].classList.remove('appear-to-left');
       logos[idOfVisible].classList.add('hidden');
       logos[idOfVisible].classList.remove('disappear-to-left');
+      this.removeAttribute('disabled');
     }, 1000);
 
     status[idOfVisible + 1] = true;
