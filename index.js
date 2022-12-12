@@ -11,7 +11,7 @@ const status = Array.from(Array(logos.length)).map((it, index) => {
 
 right.addEventListener('click', function () {
   let idOfVisible = status.indexOf(true);
-  this.setAttribute('disabled', true);
+  right.setAttribute('disabled', true);
   logos[idOfVisible].classList.remove('appear-to-right');
   logos[idOfVisible].classList.add('disappear-to-right');
   setTimeout(() => {
@@ -33,7 +33,7 @@ right.addEventListener('click', function () {
 
       logos[idOfVisible].classList.add('hidden');
       logos[idOfVisible].classList.remove('disappear-to-right');
-      this.removeAttribute('disabled');
+      right.removeAttribute('disabled');
     }, 1000);
     status[logos.length - 1] = true;
   } else {
@@ -45,7 +45,7 @@ right.addEventListener('click', function () {
       logos[idOfVisible - 1].classList.remove('appear-to-right');
       logos[idOfVisible].classList.add('hidden');
       logos[idOfVisible].classList.remove('disappear-to-right');
-      this.removeAttribute('disabled');
+      right.removeAttribute('disabled');
     }, 1000);
 
     status[idOfVisible - 1] = true;
@@ -54,7 +54,7 @@ right.addEventListener('click', function () {
 
 left.addEventListener('click', () => {
   let idOfVisible = status.indexOf(true);
-  this.setAttribute('disabled', true);
+  left.setAttribute('disabled', true);
 
   logos[idOfVisible].classList.remove('appear-to-left');
   logos[idOfVisible].classList.add('disappear-to-left');
@@ -77,7 +77,7 @@ left.addEventListener('click', () => {
 
       logos[idOfVisible].classList.add('hidden');
       logos[idOfVisible].classList.remove('disappear-to-left');
-      this.removeAttribute('disabled');
+      left.removeAttribute('disabled');
     }, 1000);
     status[0] = true;
   } else {
@@ -89,7 +89,7 @@ left.addEventListener('click', () => {
       logos[idOfVisible + 1].classList.remove('appear-to-left');
       logos[idOfVisible].classList.add('hidden');
       logos[idOfVisible].classList.remove('disappear-to-left');
-      this.removeAttribute('disabled');
+      left.removeAttribute('disabled');
     }, 1000);
 
     status[idOfVisible + 1] = true;
