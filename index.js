@@ -4,8 +4,9 @@ import './style.css';
 const logos = document.querySelectorAll('div[data-id*="logo"]');
 const left = document.querySelector('button[data-id="left"]');
 const right = document.querySelector('button[data-id="right"]');
+const buttons = document.querySelectorAll('button[data-id="changing-button"]');
 
-const status = Array.from(Array(logos.length)).map((it, index) => {
+let status = Array.from(Array(logos.length)).map((it, index) => {
   return index === 0;
 });
 
@@ -94,4 +95,19 @@ left.addEventListener('click', () => {
 
     status[idOfVisible + 1] = true;
   }
+});
+
+buttons.forEach(function (it, index) {
+  it.addEventListener('click', () => {
+    console.log(index);
+    let idOfVisible = status.indexOf(true);
+
+    logos[idOfVisible].classList.add('hidden');
+    logos[idOfVisible].classList.remove('md:flex');
+
+    status[idOfVisible] = false;
+    status[index] = true;
+    logos[index].classList.remove('hidden');
+    logos[index].classList.add('md:flex');
+  });
 });
