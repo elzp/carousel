@@ -15,11 +15,12 @@
     style="background: #edf2f7"
   >
     <!-- Display Container (not part of component) START -->
-    <div class="m-10 mx-auto p-16 sm:p-24 lg:p-48 bg-gray-200">
+    <div class="relative m-10 p-0 sm:m-24 lg:m-48 bg-gray-200">
       <!-- Carousel Body -->
       <div
         class="
           overflow-hidden
+          z-0
           relative
           rounded-lg
           items-center
@@ -28,7 +29,7 @@
         "
         style="min-height: 19rem"
       >
-        <div class="overflow-clip block flex">
+        <div class="overflow-hidden block flex">
           <!-- partwithlogos -->
           <div data-id="logo1" class="block md:flex">
             <div
@@ -414,55 +415,55 @@
             </div>
           </div>
         </div>
-        <button
-          data-id="left"
-          class="
-            absolute
-            top-0
-            mt-32
-            left-0
-            bg-white
-            rounded-full
-            shadow-md
-            h-12
-            w-12
-            text-2xl text-indigo-600
-            hover:text-indigo-400
-            focus:text-indigo-400
-            -ml-6
-            focus:outline-none focus:shadow-outline
-          "
-        >
-          <span class="block" style="transform: scale(-1)">&#x279c;</span>
-        </button>
-        <button
-          data-id="right"
-          class="
-            absolute
-            top-0
-            mt-32
-            right-0
-            bg-white
-            rounded-full
-            shadow-md
-            h-12
-            w-12
-            text-2xl text-indigo-600
-            hover:text-indigo-400
-            focus:text-indigo-400
-            -mr-6
-            focus:outline-none focus:shadow-outline
-          "
-        >
-          <span class="block" style="transform: scale(1)">&#x279c;</span>
-        </button>
       </div>
-
+      <button
+        data-id="left"
+        class="
+          absolute
+          z-3
+          top-0
+          mt-32
+          left-0
+          bg-white
+          rounded-full
+          shadow-md
+          h-12
+          w-12
+          text-2xl text-indigo-600
+          hover:text-indigo-400
+          focus:text-indigo-400
+          -ml-6
+          focus:outline-none focus:shadow-outline
+        "
+      >
+        <span class="block" style="transform: scale(-1)">&#x279c;</span>
+      </button>
+      <button
+        data-id="right"
+        class="
+          absolute
+          z-3
+          top-0
+          mt-32
+          right-0
+          bg-white
+          rounded-full
+          shadow-md
+          h-12
+          w-12
+          text-2xl text-indigo-600
+          hover:text-indigo-400
+          focus:text-indigo-400
+          -mr-6
+          focus:outline-none focus:shadow-outline
+        "
+      >
+        <span class="block" style="transform: scale(1)">&#x279c;</span>
+      </button>
       <!-- Carousel Tabs -->
       <div class="flex items-center pt-5 justify-between">
         <button class="px-2 opacity-50 hover:opacity-100 focus:opacity-100">
-          <div>
-					</div>
+          <div></div>
         </button>
         <button class="px-2 opacity-100 hover:opacity-100 focus:opacity-100">
           <img
