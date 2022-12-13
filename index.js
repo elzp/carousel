@@ -105,9 +105,14 @@ buttons.forEach(function (it, index) {
     logos[idOfVisible].classList.add('hidden');
     logos[idOfVisible].classList.remove('md:flex');
 
+    buttons[idOfVisible].classList.remove('opacity-100');
+    buttons[idOfVisible].classList.add('opacity-50');
+
     status[idOfVisible] = false;
     status[index] = true;
     logos[index].classList.remove('hidden');
     logos[index].classList.add('md:flex');
+    buttons[index].classList.remove('opacity-50');
+    buttons[index].classList.add('opacity-100');
   });
 });
